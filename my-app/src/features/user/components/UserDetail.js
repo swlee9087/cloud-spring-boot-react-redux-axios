@@ -6,7 +6,7 @@ import axios from 'axios';
 export default function UserDetail() {
     const SERVER = 'http://localhost:8080'
     const history = useHistory()
-    const [detail, setDetail] = useState()
+    const [detail, setDetail] = useState({})
 
     const fetchOne = () => {
         const sessionUser = JSON.parse(localStorage.getItem('sessionUser')); 
@@ -30,11 +30,7 @@ export default function UserDetail() {
          <h1>회원정보</h1>
     
         <ul>
-            <li>
-                <label>
-                    <span>User ID: {detail.userId} </span>
-                </label>
-            </li>
+           
             <li>
                 <label>
                     <span>아이디 : {detail.username} </span>
