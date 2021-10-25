@@ -4,7 +4,7 @@ import { useHistory  } from 'react-router-dom';
 
 export default function UserAdd() {
     const history = useHistory()
-    const SERVER = 'http://localhost:8080'
+
     const [join, setJoin] = useState({
         username:'', 
         password:'', 
@@ -21,12 +21,8 @@ export default function UserAdd() {
         })
     }
     
-    const userJoin = joinRequest => 
-                axios.post(`${SERVER}/users`, JSON.stringify(joinRequest),{headers})
-    const headers = {
-        'Content-Type' : 'application/json',
-        'Authorization': 'JWT fefege..'
-    }
+    
+    
     const handleSubmit = e => {
         e.preventDefault()
         const joinRequest = {...join}

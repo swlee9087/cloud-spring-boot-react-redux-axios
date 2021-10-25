@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useHistory  } from 'react-router-dom';
 
@@ -6,7 +5,6 @@ export default function UserRemove() {
   const [pwd, setPwd] = useState('')
   const sessionUser = JSON.parse(localStorage.getItem('sessionUser'))
   const history = useHistory()
-  const SERVER = 'http://localhost:8080'
   
   const handleChange = e => {
     setPwd(e.target.value)
