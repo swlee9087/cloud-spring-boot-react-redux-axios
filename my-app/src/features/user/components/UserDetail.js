@@ -10,7 +10,7 @@ export default function UserDetail() {
     const fetchOne = () => {
         const sessionUser = JSON.parse(localStorage.getItem('sessionUser')); 
         // alert('사용자 아이디: '+sessionUser.userId)
-        userFetchOne(sessionUser)
+        UserFetchOne(sessionUser)
         .then(res => {
             alert(`회원 정보 조회 SUCCESS : ${res.data}`)
             setDetail(res.data)

@@ -5,3 +5,7 @@ export {default as UserLogin} from 'features/user/components/UserLogin'
 export {default as UserModify} from 'features/user/components/UserModify'
 export {default as UserRemove} from 'features/user/components/UserRemove'
 export {default as UserListForm} from 'features/user/components/UserListForm'
+
+export { default as userAPI } from 'features/user/reducer/userAPI'
+
+export { default as userSlicer } from 'features/user/reducer/userSlice'

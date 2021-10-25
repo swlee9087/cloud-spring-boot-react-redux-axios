@@ -23,7 +23,8 @@ export default function UserLogin() {
     e.preventDefault()
     e.stopPropagation()
     const loginRequest = {username, password}
-    userLogin(loginRequest)
+
+    UserLogin(loginRequest)
     .then(res => {
       const user = res.data;
       if(user.username != null){
@@ -41,7 +42,6 @@ export default function UserLogin() {
     })
 
   }
-  const userLogin = loginRequest => {}
     
   return (
     <form method="POST">

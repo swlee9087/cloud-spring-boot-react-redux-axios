@@ -5,13 +5,13 @@ import { UserListForm } from 'features/user/index';
 export default function UserList() {
   const [list, setList] = useState([])
   
-  // const fetchList = () => {
-  //   axios.get(`${SERVER}/users/list`)
-  //   .then(res =>
-  //     setList(res.data)
-  //   )
-  //   .catch(err => console.log(err))
-  // }
+  const fetchList = () => {
+    UserFetchList()
+    .then(res =>
+      setList(res.data)
+    )
+    .catch(err => console.log(err))
+  }
 
   useEffect(() => {
     fetchList()

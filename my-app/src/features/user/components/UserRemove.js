@@ -12,7 +12,7 @@ export default function UserRemove() {
   const handleClick = e => {
     e.preventDefault()
     if(sessionUser.password === pwd){
-      axios.delete(`${SERVER}/users/${sessionUser.userId}`)
+      UserRemove(sessionUser)
       .then(res => {
         console.log(res.data)
         localStorage.setItem('sessionUser', '')

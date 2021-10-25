@@ -27,7 +27,7 @@ export default function UserAdd() {
         e.preventDefault()
         const joinRequest = {...join}
         alert(`회원가입 정보: ${JSON.stringify(joinRequest)}`)
-        userJoin(joinRequest)
+        UserJoin(joinRequest)
         .then(res =>{
             alert('회원가입 성공')
             history.push('/users/login')

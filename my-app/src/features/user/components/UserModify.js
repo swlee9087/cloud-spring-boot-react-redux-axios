@@ -19,10 +19,7 @@ export default function UserModify() {
             ...modify,
             [name] : value
         })
-    }
-    
-    
-    
+    }          
     const handleSubmit = e => {
         e.preventDefault()
         const modifyRequest = {...modify}
