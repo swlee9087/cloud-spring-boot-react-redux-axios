@@ -6,8 +6,12 @@ export default function UserAdd() {
     const history = useHistory()
     const SERVER = 'http://localhost:8080'
     const [join, setJoin] = useState({
-        username:'', password:'', email:'', name:'', regDate: new Date().toLocaleDateString()
-    })
+        username:'', 
+        password:'', 
+        email:'', 
+        name:'', 
+        regDate: new Date().toLocaleDateString()
+    })  // as inverted comm = allows overwrite == memory space for variables === state
     const {username, password, email, name} = join
     const handleChange = e => {
         const { value, name } = e.target
